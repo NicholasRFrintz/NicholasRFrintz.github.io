@@ -17,8 +17,7 @@ table, td, th {
 <body>
 <h1 style="text-align:center">Simple HTML & CSS Page</h1>
 <p><img src="images/profilepic-adj2.jpg" width="200" height="300"> My name is Douglas Cheung and I am a student at CSM for 3 years at this point. I have what could only be described as an obsession with my own story series.</p>
-<div style="clear:both">
-<p>I am attending this class because I desire knowhow in web development. So far, it's not as hard as I'm led to believe, and I hope that that's not the case.</p>
+<p style="clear:both">I am attending this class because I desire knowhow in web development. So far, it's not as hard as I'm led to believe, and I hope that that's not the case.</p>
 <h2 style="text-align:center">Technologies for this class</h2>
 <ul>
   <li>HTML</li>
