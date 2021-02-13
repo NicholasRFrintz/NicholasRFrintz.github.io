@@ -13,15 +13,16 @@ table, td, th {
          }
 </style>
 <title>PHP Test</title>
-<script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
 $(document).ready(function(){
   $("button").click(function(){
-    $("div").animate({
-      left: '250px',
-      opacity: '0.5',
-      height: '150px',
-      width: '150px'
-    });
+    var h1 = $("h1");
+    var img = $("img");
+    h1.animate({fontSize: '4em'}, "slow");
+    h1.animate({fontSize: '2em'}, "slow");
+    h1.css("color", "red", "slow");
+    img.css('border', 'solid 5px black');
   });
 });
 </script>
