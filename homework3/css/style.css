@@ -9,11 +9,11 @@
 }
 @media (orientation: portrait) {
   html {
-    background-color: C6C6C6
+    background-color: gray
   }
 }
 @media (orientation: landscape) {
   html {
-    background-color: FF9A84
+    background-color: light-red
   }
 }
