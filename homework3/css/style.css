@@ -7,6 +7,13 @@
 .para {
   
 }
-@media (max-width: 1280px) {
-  background-color: gray
+@media (orientation: portrait) {
+  html {
+    background-color: gray
+  }
+}
+@media (orientation: landscape) {
+  html {
+    background-color: pink
+  }
 }
