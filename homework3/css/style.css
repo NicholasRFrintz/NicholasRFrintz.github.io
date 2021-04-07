@@ -7,6 +7,13 @@
 .para {
   
 }
+p {
+  font-size： 18px
+}
+.comment {
+  width: 300px
+  height: 150px
+}
 @media (orientation: portrait) {
   html {
     background-color: gray
