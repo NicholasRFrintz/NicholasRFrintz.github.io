@@ -7,28 +7,34 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<title>ABC Toys - Contact Us</title>
-<link rel="stylesheet" href="css/style1.css">
+<title>ABC Toys - Location</title>
 
 </head>
 
+<body>
 
-<h2>Contact Methods</h2>
-<ul>
-  <li>Email - <a href="abctoys@gmail.com">abctoys@gmail.com</a></li>
-  <li>Phone - <a href="tel:4083506446">(408)350-6446</a></li>
-  <li>Address - 12 Valley View Circle Fremont, CA 94538</li>
-  <li>Facebook - <a href="https://www.facebook.com/ABCToys/">ABC Toys</a></li>
-</ul>
-<form action="action_page.php" method="get" id="form1">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name"><br>
-  <label for="email">Email:</label>
-  <input type="text" id="email" name="email"><br>
-  <label for="comment" style="clear:both">Comment (1000 Max characters):</label><br>
-  <input type="text" style="height:80px;width:250px;" id="name" name="name" maxlength="1000">
-</form>
-<button type="submit" form="form1" value="Submit">Submit</button>
+<p>Click the button to get your immediate location.</p>
+
+<button onclick="getLocation()">Obtain your coordinates</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
 
 <ul>
   <li><a href="index.html">Index</a> - Return to Index</li>
@@ -38,4 +44,5 @@
   <li><a href="extra.html">Extra</a> - Description of 3 capabilities offered by WURFL.</li>
 </ul>
 
+</body>
 </html>
