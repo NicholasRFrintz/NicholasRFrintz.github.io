@@ -12,12 +12,6 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/js/service-worker.js');
   });
 }
-if (typeof window === 'object') {
-// Check if document is finally loaded
-   document.addEventListener("DOMContentLoaded", function () {
-       alert('Finished loading')
-  });
-}
 </script>
 
 </head>
