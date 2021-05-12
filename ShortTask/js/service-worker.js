@@ -1,12 +1,7 @@
 if ('serviceWorker' in navigator) {
-  console.log('CLIENT: service worker registration in progress.');
-  navigator.serviceWorker.register('/service-worker.js').then(function() {
-    console.log('CLIENT: service worker registration complete.');
-  }, function() {
-    console.log('CLIENT: service worker registration failure.');
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js');
   });
-} else {
-  console.log('CLIENT: service worker is not supported.');
 }
 document.getElementById("para1").innerHTML = "Let us start off the comparison with a short introduction.";
 document.getElementById("para2").innerHTML = "Hybrid Applications are any web applications built using HTML, CSS and JavaScript, which is then wrapped inside of a native app with help from some special container platforms. It is a shorthand combination of elements with both web and native development approaches.";
