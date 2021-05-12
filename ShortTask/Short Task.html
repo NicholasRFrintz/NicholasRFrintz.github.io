@@ -6,6 +6,14 @@
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('https://nicholasrfrintz.github.io/ShortTask/js/service-worker.js');
+  });
+}
+</script>
+
 </head>
 <body>
 
@@ -14,7 +22,7 @@
 <p id="para1"></p>
 
 <p id="para2"></p>
-
+  
 <p id="para3"></p>
 
 <script src="https://nicholasrfrintz.github.io/ShortTask/js/service-worker.js"></script>
