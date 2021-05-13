@@ -9,18 +9,15 @@ font-family: 'Arial', serif;
 font-family: 'Arial', serif;
 }
 .table {
-  border: 1px solid black;
   border-collapse: collapse;
 }
 .th {
-  border: 1px solid black;
   border-collapse: collapse;
   padding: 5px;
   text-align: left;
   font-family: 'Times New Roman', serif
 }
 .td {
-  border: 1px solid black;
   border-collapse: collapse;
   padding: 5px;
   text-align: left;
