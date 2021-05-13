@@ -14,7 +14,7 @@ font-family: 'Arial', serif;
 .th {
   border-collapse: collapse;
   padding: 5px;
-  text-align: left;
+  text-align: center;
   font-family: 'Times New Roman', serif
 }
 .td {
