@@ -17,11 +17,13 @@ font-family: 'Arial', serif;
   border-collapse: collapse;
   padding: 5px;
   text-align: left;
+  font-family: 'Times New Roman', serif
 }
 .td {
   border: 1px solid black;
   border-collapse: collapse;
   padding: 5px;
   text-align: left;
+  font-family: 'Times New Roman', serif
 }
 </html>
