@@ -8,6 +8,9 @@ font-family: 'Arial', serif;
 .label {
 font-family: 'Arial', serif;
 }
+table, th, td {
+  display: block;
+}
 .table {
   border-collapse: collapse;
 }
