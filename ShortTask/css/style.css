@@ -24,11 +24,17 @@ table, th, td {
   text-align: center;
   font-family: 'Times New Roman', serif
 }
+th:nth-child(odd) {
+  background: #ccc;
+}
 .td {
   border-collapse: collapse;
   padding: 5px;
   text-align: left;
   font-family: 'Times New Roman', serif
+}
+td:nth-child(odd) {
+  background: #ccc;
 }
 }
 </html>
