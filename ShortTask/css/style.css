@@ -1,9 +1,4 @@
 <html lang="en">
-@media (max-width: 800px) {
-  .table {
-    flex-direction:column;
-  }
-}
 .title {
 font-family: 'Arial', serif;
 }
