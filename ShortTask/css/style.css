@@ -1,10 +1,10 @@
-title {
+.title {
 font-family: Arial;
 }
 p {
 font-family: Arial;
 }
-table {
+.table {
 font-family: Arial;
 }
 @media
@@ -12,7 +12,7 @@ font-family: Arial;
     and (max-width: 760px), (min-device-width: 768px) 
     and (max-device-width: 1024px)  {
 
-	table1, table2, table3, th1, td1, th2, td2, th3, td3, tr {
+	table, thead, tbody, th, td, tr {
 		display: block;
 	}
 
@@ -37,7 +37,7 @@ font-family: Arial;
 	position: absolute;
 	top: 0;
 	left: 6px;
-	width: 65%;
+	width: 45%;
 	padding-right: 10px;
 	white-space: nowrap;
     }
