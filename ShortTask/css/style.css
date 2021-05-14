@@ -12,7 +12,7 @@ font-family: Arial;
     and (max-width: 760px), (min-device-width: 768px) 
     and (max-device-width: 1024px)  {
 
-	table, thead, tbody, th, td, tr {
+	table1, table2, table3, th1, td1, th2, td2, th3, td3, tr {
 		display: block;
 	}
 
