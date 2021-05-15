@@ -16,6 +16,15 @@ font-family: Arial;
 .table {
 font-family: Arial;
 }
+.t12 {	
+font-family: Arial;
+}
+.t22 {	
+font-family: Arial;
+}
+.t32 {
+font-family: Arial;
+}
 @media
     only screen 
     and (max-width: 760px), (min-device-width: 768px) 
