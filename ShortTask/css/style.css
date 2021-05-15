@@ -30,6 +30,7 @@ font-family: Arial;
 	border: none;
 	border-bottom: 1px solid #eee;
 	position: relative;
-	padding-left: 50%;
+	padding-left: 12%;
+	padding-right: 12%;
     }
 }
