@@ -12,10 +12,39 @@
 </head>
 <body>
 <h1 style="text-align:center">Homework 2</h1>
-            <p id="first"><strong style="color:red; font-family:TimesNewRoman">xy</strong> 12 <em style="color:green; font-family:Impact">89</em></p>
+<p id="first"><strong style="color:red; font-family:TimesNewRoman">xy</strong> 12 <em style="color:green; font-family:Impact">89</em></p>
+
+<input type="number" placeholder="Insert Number 1" id="i1">
+<input type="number" placeholder="Insert Number 2" id="i2">
+<input type="number" placeholder="Insert Number 3" id="i3">
+<button type="button" onclick="getInputValue();">Process</button>
+<script>
+  function getInputValue() {
+  let sum = parseInt(i1.value) + parseInt(i2.value) + parseInt(i3.value);
+  document.getElementById("1").innerHTML = sum;
+  let avg = ( parseInt(i1.value) + parseInt(i2.value) + parseInt(i3.value) ) / 3;
+  document.getElementById("2").innerHTML = avg;
+  let pro = parseInt(i1.value) * parseInt(i2.value) * parseInt(i3.value);
+  document.getElementById("3").innerHTML = pro;
+  let min = Math.min(parseInt(i1.value), parseInt(i2.value), parseInt(i3.value));
+  document.getElementById("4").innerHTML = min;
+  let max = Math.max(parseInt(i1.value), parseInt(i2.value), parseInt(i3.value));
+  document.getElementById("5").innerHTML = max;
+  }
+</script>
+<p>Sum: </p>
+<div id="1">NaN</div>
+<p>Average: </p>
+<div id="2">NaN</div>
+<p>Product: </p>
+<div id="3">NaN</div>
+<p>Smallest: </p>
+<div id="4">NaN</div>
+<p>Largest: </p>
+<div id="5">NaN</div>
 <ul>
   <li><a href="https://nicholasrfrintz.github.io/hw1.html">hw1.html - Available</a></li>
-  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Available</a></li>
   <li><a href="https://nicholasrfrintz.github.io/hw3.html">hw3.html - Soon</a></li>
   <li><a href="https://nicholasrfrintz.github.io/hw4.html">hw4.html - Soon</a></li>
   <li><a href="https://nicholasrfrintz.github.io/hw5.html">hw5.html - Soon</a></li>
