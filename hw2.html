@@ -7,6 +7,17 @@
 	color: blue;
     font-family: Arial
 }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
 </style>
 <title>CIS 114 Homework 2 - Basic Operations</title>
 </head>
@@ -42,6 +53,57 @@
 <div id="4">NaN</div>
 <p>Largest: </p>
 <div id="5">NaN</div>
+<p>-----------------------</p>
+<script>
+function getExchangeRate() {
+  let eur = Math.round(parseFloat(USD.value) * "0.89" * "100")/"100";
+  document.getElementById("EUR").innerHTML = eur;
+  let cad = Math.round(parseFloat(USD.value) * "1.31" * "100")/"100";
+  document.getElementById("CAD").innerHTML = cad;
+  let hkd = Math.round(parseFloat(USD.value) * "7.80" * "100")/"100";
+  document.getElementById("HKD").innerHTML = hkd;
+  let yen = Math.round(parseFloat(USD.value) * "108.38" * "100")/"100";
+  document.getElementById("YEN").innerHTML = yen;
+  let mxn = Math.round(parseFloat(USD.value) * "19.11" * "100")/"100";
+  document.getElementById("MXN").innerHTML = mxn;
+}
+</script>
+<table>
+  <tr>
+    <th>Monetary Exchange Rates</th>
+  </tr>
+  <tr>
+    <th>USD</th>
+    <th><input type="number" onchange="setTwoNumberDecimal" min="0" max="10" value="0.00" id="USD"></th>
+    <th><button type="button" onclick="getExchangeRate();">Exchange</button></th>
+  </tr>
+  <tr>
+    <th>Euro</th>
+    <th id="EUR">NaN</th>
+  </tr>
+  <tr>
+    <th>Canadian Dollar</th>
+    <th id="CAD">NaN</th>
+  </tr>
+  <tr>
+    <th>Hong Kong Dollar</th>
+    <th id="HKD">NaN</th>
+  </tr>
+  <tr>
+    <th>Japanese Yen</th>
+    <th id="YEN">NaN</th>
+  </tr>
+  <tr>
+    <th>Mexican Peso</th>
+    <th id="MXN">NaN</th>
+  </tr>
+</table>
+<script>
+function setTwoNumberDecimal(event) {
+    this.value = parseFloat(this.value).toFixed(2);
+}
+</script>
+<p>-----------------------</p>
 <ul>
   <li><a href="https://nicholasrfrintz.github.io/hw1.html">hw1.html - Available</a></li>
   <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Available</a></li>
