@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+#first {
+	color: blue;
+    font-family: Arial
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+<title>CIS 114 Homework 3 - Functions</title>
+</head>
+<body>
+<h1 style="text-align:center">Student Grades</h1>
+<div>
+<label for="i1">Homework Average</label>
+<input type="number" min="0" max="100" placeholder="Insert Number 1" id="i1" name="i1" required>
+</div>
+<div>
+<label for="i2">Mid-Term Score</label>
+<input type="number" min="0" max="100" placeholder="Insert Number 2" id="i2" name="i2" required>
+</div>
+<div>
+<label for="i3">Final Exam Score</label>
+<input type="number" min="0" max="100" placeholder="Insert Number 3" id="i3" name="i3" required>
+</div>
+<div>
+<label for="i4">Participation</label>
+<input type="number" min="0" max="100" placeholder="Insert Number 4" id="i4" name="i4" required>
+</div>
+<button type="button" onclick="getInputValue();">Process</button>
+<p id="out"></p>
+<p id="msg"></p>
+<script>
+function getInputValue() {
+  let fa = (parseInt(i1.value) * .5) + (parseInt(i2.value) * .2) + (parseInt(i3.value) * .2) + (parseInt(i4.value) * .1);
+  let far = Math.round(fa);
+  let msg = "";
+  if (far < 60) {
+    msg = ("Grade: F - Student must retake the course");
+  } else if (far < 70) {
+    msg = ("Grade: D - Student must retake the course");
+  } else if (far < 80) {
+    msg = ("Grade: C");
+  } else if (far < 90) {
+    msg = ("Grade: B");
+  } else if (far < 100) {
+    msg = ("Grade: A");
+  };
+  document.getElementById("out").innerHTML = "The student's final average is: " + far + "<br>" + msg;
+}
+</script>
+<div id="output">
+</div>
+</body>
+</html>
