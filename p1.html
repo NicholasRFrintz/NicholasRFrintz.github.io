@@ -19,25 +19,25 @@ td, th {
   padding: 8px;
 }
 </style>
-<title>CIS 114 Homework 3 - Functions</title>
+<title>Homework 3 - Part 1 Student Grades</title>
 </head>
 <body>
 <h1 style="text-align:center">Student Grades</h1>
 <div>
 <label for="i1">Homework Average</label>
-<input type="number" min="0" max="100" placeholder="Insert Number 1" id="i1" name="i1" required>
+<input type="number" min="0" max="100" oninput="validity.valid||(value='');" placeholder="Insert Number 1" id="i1" name="i1" required>
 </div>
 <div>
 <label for="i2">Mid-Term Score</label>
-<input type="number" min="0" max="100" placeholder="Insert Number 2" id="i2" name="i2" required>
+<input type="number" min="0" max="100" oninput="validity.valid||(value='');" placeholder="Insert Number 2" id="i2" name="i2" required>
 </div>
 <div>
 <label for="i3">Final Exam Score</label>
-<input type="number" min="0" max="100" placeholder="Insert Number 3" id="i3" name="i3" required>
+<input type="number" min="0" max="100" oninput="validity.valid||(value='');" placeholder="Insert Number 3" id="i3" name="i3" required>
 </div>
 <div>
 <label for="i4">Participation</label>
-<input type="number" min="0" max="100" placeholder="Insert Number 4" id="i4" name="i4" required>
+<input type="number" min="0" max="100" oninput="validity.valid||(value='');" placeholder="Insert Number 4" id="i4" name="i4" required>
 </div>
 <button type="button" onclick="getInputValue();">Process</button>
 <p id="out"></p>

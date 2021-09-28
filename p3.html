@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+#first {
+	color: blue;
+    font-family: Arial
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+td, th {
+  text-align: left;
+}
+</style>
+<title>Homework 3 - Part 3 Celsius to Farenheit</title>
+</head>
+
+<h2 style="text-aligh:center">Celcius to Farenheit</h2>
+
+<body>
+<div>
+<table>
+  <tr>
+    <th><label for="c1">Celcius: </label><input type="number" placeholder="Enter Temperature" id="c1" name="c1"></th>
+    <th>Farenheit: </th>
+    <th id="f"></th>
+  </tr>
+</table>
+</div>
+
+<button type="button" onclick="CTF();">Celcius to Farenheit</button>
+
+<script>
+function CTF() {
+  let f1 = (parseFloat(c1.value)) * 9 / 5 + 32;
+  document.getElementById("f").innerHTML = f1;
+}
+</script>
+
+<div>
+<table>
+  <tr>
+    <th><label for="f1">Farenheit: </label><input type="number" placeholder="Enter Temperature" id="f1" name="f1"></th>
+    <th>Celcius: </th>
+    <th id="c"></th>
+  </tr>
+</table>
+</div>
+
+<button type="button" onclick="FTC();">Farenheit to Celcius</button>
+
+<script>
+function FTC() {
+  let c1 = 5 / 9 * (parseFloat(f1.value) - 32);
+  document.getElementById("c").innerHTML = c1;
+}
+</script>
+</body>
+</html>

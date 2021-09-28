@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+#first {
+	color: blue;
+    font-family: Arial
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#t1u, t1d {
+  width: 75%
+}
+#t2u, t2d {
+  width: 25%
+}
+td, th {
+  text-align: left;
+  width: 25%
+}
+</style>
+<title>Homework 3 - Part 2 Commissions</title>
+</head>
+
+<body>
+<h2>Commissions</h2>
+
+<div>
+<label for="name">Salesperson</label>
+<input type="text" placeholder="Insert Name" id="name" name="name">
+</div>
+
+<h2>Input the number of items sold for each item number:</h2>
+
+<div>
+<label for="i1">Item 1: </label>
+<input type="number" min="0" oninput="validity.valid||(value='');" placeholder="Item 1 Number" id="i1" name="i1">
+</div>
+
+<div>
+<label for="i2">Item 2: </label>
+<input type="number" min="0" oninput="validity.valid||(value='');" placeholder="Item 2 Number" id="i2" name="i2">
+</div>
+
+<div>
+<label for="i3">Item 3: </label>
+<input type="number" min="0" oninput="validity.valid||(value='');" placeholder="Item 3 Number" id="i3" name="i3">
+</div>
+
+<div>
+<label for="i4">Item 4: </label>
+<input type="number" min="0" oninput="validity.valid||(value='');" placeholder="Item 4 Number" id="i4" name="i4">
+</div>
+
+<button type="button" onclick="getInputValue();">Submit</button>
+<button type="button" onclick="resetValue();">Reset</button>
+
+<script>
+function getInputValue() {
+  let it1 = (parseInt(i1.value));
+  let it2 = (parseInt(i2.value));
+  let it3 = (parseInt(i3.value));
+  let it4 = (parseInt(i4.value));
+  let tt1 = (parseInt(i1.value) * 20.99).toFixed(2);
+  let tt2 = (parseInt(i2.value) * 12.75).toFixed(2);
+  let tt3 = (parseInt(i3.value) * 9.95).toFixed(2);
+  let tt4 = (parseInt(i4.value) * 35.89).toFixed(2);
+  let tas = ((parseInt(i1.value) * 20.99) + (parseInt(i2.value) * 12.75) + (parseInt(i3.value) * 9.95) + (parseInt(i4.value) * 35.89)).toFixed(2);
+  let twe = (((parseInt(i1.value) * 20.99) + (parseInt(i2.value) * 12.75) + (parseInt(i3.value) * 9.95) + (parseInt(i4.value) * 35.89)) * 0.09 + 250).toFixed(2);
+  document.getElementById("p1").innerHTML = it1;
+  document.getElementById("p2").innerHTML = it2;
+  document.getElementById("p3").innerHTML = it3;
+  document.getElementById("p4").innerHTML = it4;
+  document.getElementById("t1").innerHTML = tt1;
+  document.getElementById("t2").innerHTML = tt2;
+  document.getElementById("t3").innerHTML = tt3;
+  document.getElementById("t4").innerHTML = tt4;
+  document.getElementById("t2u").innerHTML = tas;
+  document.getElementById("t2d").innerHTML = twe;
+}
+</script>
+<script>
+function resetValue() {
+  document.getElementById("p1").innerHTML = 0;
+  document.getElementById("p2").innerHTML = 0;
+  document.getElementById("p3").innerHTML = 0;
+  document.getElementById("p4").innerHTML = 0;
+  document.getElementById("t1").innerHTML = 0;
+  document.getElementById("t2").innerHTML = 0;
+  document.getElementById("t3").innerHTML = 0;
+  document.getElementById("t4").innerHTML = 0;
+  document.getElementById("t2u").innerHTML = 0;
+  document.getElementById("t2d").innerHTML = 0;
+  }
+</script>
+<table>
+  <tr>
+    <th>Item #</th>
+    <th>Price</th>
+    <th>Number Sold</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <th>$20.99</th>
+    <th id="p1">0</th>
+    <th id="t1">0</th>
+  </tr>
+  <tr>
+    <th>2</th>
+    <th>$12.75</th>
+    <th id="p2">0</th>
+    <th id="t2">0</th>
+  </tr>
+  <tr>
+    <th>3</th>
+    <th>$9.95</th>
+    <th id="p3">0</th>
+    <th id="t3">0</th>
+  </tr>
+  <tr>
+    <th>4</th>
+    <th>$35.89</th>
+    <th id="p4">0</th>
+    <th id="t4">0</th>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th id="t1u">Total Amount Sold:</th>
+    <th id="t2u">0</th>
+  </tr>
+  <tr>
+    <th id="t1d">Total Weekly Earnings:</th>
+    <th id="t2d">0</th>
+  </tr>
+</table>
+</body>
+</html>
