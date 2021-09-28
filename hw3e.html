@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Homework 3 Extra - Simple Multiplication</title>
+
+<script type="text/javascript">
+var r1;
+var r2;
+var r3;
+var r4;
+
+function multiQ()
+{
+r1 = Math.floor( 1 + Math.random() * 9 );
+r2 = Math.floor( 1 + Math.random() * 9 );
+document.getElementById("prompt").innerHTML = "How much is " + r1 + " times " +     r2 + " ?";
+r4 = (r1*r2);
+}
+
+function answer1()
+{
+var statusDiv = document.getElementById("status");
+r3=document.getElementById("answer").value;
+
+if(r3 != r4)
+statusDiv.innerHTML="No. Please try again";
+else
+if (r3==r4)
+{
+statusDiv.innerHTML="Very good!";
+multiQ();
+}}
+
+</script>
+</head>
+<body onload="multiQ();">
+<h2 style="text-align:center">Multiplication</h2>
+<form>
+<div id ="prompt"></div>
+<input id="answer" type="text" />
+<input type="button" value="Solve!" onclick="answer1()" />
+<div id ="status">Click the Solve button to Solve the problem</div>
+</form>
+</body>
+</html>
