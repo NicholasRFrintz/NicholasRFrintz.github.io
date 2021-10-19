@@ -11,23 +11,28 @@
 <h1 style="text-align:center">Extra Credit - Squares</h1>
 <div>
 <label for="i">Square Side Length: </label>
-<input type="number" min="2" max="10" oninput="validity.valid||(value='');" placeholder="Side Length" id="i" name="i">
+<input type="number" min="2" max="10" oninput="validity.valid||(value='');" placeholder="Side Length" id="ine" name="ine">
 </div>
 <button type="button" onclick="makeSquare();">Start</button>
 
-<p id="output"></p>
+<p id="output">This is a placeholder</p>
 
 <script>
 function makeSquare() {
-  sq = "";
-  for (int j = 1; j <= 5; j++) {
-    for (int i = 1; i <= 10; i++) {
-      if (j == 1 || j == 5 || i == 1 || i == 10) {
-        sq += "*";
-      } else {
-        sq += " ";
+  let sq = "";
+  var input = parseInt(ine.value);
+  var i, j;
+  for (i = 1; i <= input; i++) {
+    for (j = 1; j <= input; j++) {
+      if (i == 1 || i == input || j == 1 || j == input) {
+        sq += "*";      
+      }
+      else {
+        sq +=  "&nbsp&nbsp";
       }
     }
+    sq += "<br>";
+  }
   document.getElementById("output").innerHTML = sq;
 }
 </script>
