@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border: solid;
+  width: 75%;
+}
+td, th {
+  text-align: left;
+  padding: 2px;
+  border: dotted;
+  width: 25%
+}
+table tr.t {
+  background: red;
+}
+table tr.a {
+  background: orange;
+}
+table tr.b {
+  background: yellow;
+}
+</style>
+<title>Homework 4 - Part 2 Compound Interest</title>
+</head>
+<body>
+<h1 style="text-align:center">Homework 4</h1>
+<p>Yes, I am aware of future maintenance, but for the time being I am unsure how to do a nested loop for tables specifically.</p>
+<p>Principal: $1000</p>
+<p>Interest Rate: 5%</p>
+<table>
+  <tr class="t">
+    <th>Year</th>
+    <th>Amount on Deposit</th>
+    <th>Interest Rate</th>
+  </tr>
+  <tr class="a">
+    <th>1</th>
+    <th id="a51"></th>
+    <th>0.05</th>
+  </tr>
+  <tr class="b">
+    <th>2</th>
+    <th id="a52"></th>
+    <th>0.05</th>
+  </tr>
+  <tr class="a">
+    <th>3</th>
+    <th id="a53"></th>
+    <th>0.05</th>
+  </tr>
+  <tr class="b">
+    <th>4</th>
+    <th id="a54"></th>
+    <th>0.05</th>
+  </tr>
+  <tr class="a">
+    <th>5</th>
+    <th id="a55"></th>
+    <th>0.05</th>
+  </tr>
+  <tr class="b">
+    <th>6</th>
+    <th id="a56"></th>
+    <th>0.05</th>
+  </tr>
+  <tr class="a">
+    <th>7</th>
+    <th id="a57"></th>
+    <th>0.05</th>
+  </tr>
+  <tr class="b">
+    <th>8</th>
+    <th id="a58"></th>
+    <th>0.05</th>
+  </tr>
+  <tr class="a">
+    <th>9</th>
+    <th id="a59"></th>
+    <th>0.05</th>
+  </tr>
+  <tr class="b">
+    <th>10</th>
+    <th id="a510"></th>
+    <th>0.05</th>
+  </tr>
+</table>
+<p>Interest Rate: 6%</p>
+<table>
+  <tr class="t">
+    <th>Year</th>
+    <th>Amount on Deposit</th>
+    <th>Interest Rate</th>
+  </tr>
+  <tr class="a">
+    <th>1</th>
+    <th id="a61"></th>
+    <th>0.06</th>
+  </tr>
+  <tr class="b">
+    <th>2</th>
+    <th id="a62"></th>
+    <th>0.06</th>
+  </tr>
+  <tr class="a">
+    <th>3</th>
+    <th id="a63"></th>
+    <th>0.06</th>
+  </tr>
+  <tr class="b">
+    <th>4</th>
+    <th id="a64"></th>
+    <th>0.06</th>
+  </tr>
+  <tr class="a">
+    <th>5</th>
+    <th id="a65"></th>
+    <th>0.06</th>
+  </tr>
+  <tr class="b">
+    <th>6</th>
+    <th id="a66"></th>
+    <th>0.06</th>
+  </tr>
+  <tr class="a">
+    <th>7</th>
+    <th id="a67"></th>
+    <th>0.06</th>
+  </tr>
+  <tr class="b">
+    <th>8</th>
+    <th id="a68"></th>
+    <th>0.06</th>
+  </tr>
+  <tr class="a">
+    <th>9</th>
+    <th id="a69"></th>
+    <th>0.06</th>
+  </tr>
+  <tr class="b">
+    <th>10</th>
+    <th id="a610"></th>
+    <th>0.06</th>
+  </tr>
+</table>
+<p>Interest Rate: 7%</p>
+<table>
+  <tr class="t">
+    <th>Year</th>
+    <th>Amount on Deposit</th>
+    <th>Interest Rate</th>
+  </tr>
+  <tr class="a">
+    <th>1</th>
+    <th id="a71"></th>
+    <th>0.07</th>
+  </tr>
+  <tr class="b">
+    <th>2</th>
+    <th id="a72"></th>
+    <th>0.07</th>
+  </tr>
+  <tr class="a">
+    <th>3</th>
+    <th id="a73"></th>
+    <th>0.07</th>
+  </tr>
+  <tr class="b">
+    <th>4</th>
+    <th id="a74"></th>
+    <th>0.07</th>
+  </tr>
+  <tr class="a">
+    <th>5</th>
+    <th id="a75"></th>
+    <th>0.07</th>
+  </tr>
+  <tr class="b">
+    <th>6</th>
+    <th id="a76"></th>
+    <th>0.07</th>
+  </tr>
+  <tr class="a">
+    <th>7</th>
+    <th id="a77"></th>
+    <th>0.07</th>
+  </tr>
+  <tr class="b">
+    <th>8</th>
+    <th id="a78"></th>
+    <th>0.07</th>
+  </tr>
+  <tr class="a">
+    <th>9</th>
+    <th id="a79"></th>
+    <th>0.07</th>
+  </tr>
+  <tr class="b">
+    <th>10</th>
+    <th id="a710"></th>
+    <th>0.07</th>
+  </tr>
+</table>
+
+<script>
+var prin = 1000;
+var inte1 = 1.05;
+var inte2 = 1.06;
+var inte3 = 1.07;
+var o1 = 1000;
+var o2 = 1000;
+var o3 = 1000;
+
+for (let i = 1; i < 11; i++) {
+  o1 *= parseFloat(inte1);
+  document.getElementById('a5'+i).innerHTML = o1.toLocaleString(undefined, {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+});
+}
+
+for (let i = 1; i < 11; i++) {
+  o2 *= parseFloat(inte2);
+  document.getElementById('a6'+i).innerHTML = o2.toLocaleString(undefined, {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+});
+}
+
+for (let i = 1; i < 11; i++) {
+  o3 *= parseFloat(inte3);
+  document.getElementById('a7'+i).innerHTML = o3.toLocaleString(undefined, {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+});
+}
+</script>
+
+</body>
+</html>

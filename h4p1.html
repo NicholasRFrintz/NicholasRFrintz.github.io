@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+</style>
+<title>Homework 4 - Part 1 Product and Sum</title>
+</head>
+<body>
+<h1 style="text-align:center">Homework 4</h1>
+<p id="product">Placeholder - This should not be seen</p>
+
+<p id="sum">Placeholder - This should not be seen</p>
+
+<script>
+var num = ['5','9','13','17','21','25'];
+var product = 5;
+var sum = 5;
+
+let text1 = "5 * 9 * 13 * 17 * 21 * 25 = ";
+
+for (var i = 1; i < num.length; i++) {
+  product *= parseInt(num[i]);
+}
+
+output = product.toLocaleString();
+
+text1 += output;
+
+document.getElementById("product").innerHTML = text1;
+
+let text2 = "5 + 9 + 13 + 17 + 21 + 25 = ";
+
+for (var i = 1; i < num.length; i++) {
+  sum += parseInt(num[i]);
+}
+
+text2 += sum;
+
+document.getElementById("sum").innerHTML = text2;
+</script>
+
+</body>
+</html>

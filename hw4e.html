@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+
+</style>
+<title>Extra Credit - Squares</title>
+</head>
+<body>
+<h1 style="text-align:center">Extra Credit - Squares</h1>
+<div>
+<label for="i">Square Side Length: </label>
+<input type="number" min="2" max="10" oninput="validity.valid||(value='');" placeholder="Side Length" id="i" name="i">
+</div>
+<button type="button" onclick="makeSquare();">Start</button>
+
+<p id="output"></p>
+
+<script>
+function makeSquare() {
+  sq = "";
+  for (int j = 1; j <= 5; j++) {
+    for (int i = 1; i <= 10; i++) {
+      if (j == 1 || j == 5 || i == 1 || i == 10) {
+        sq += "*";
+      } else {
+        sq += " ";
+      }
+    }
+  document.getElementById("output").innerHTML = sq;
+}
+</script>
+
+</body>
+</html>
