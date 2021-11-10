@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<script>
+function links {
+  location
+}
+</script>
+<style>
+#head {
+  text-align: center;
+}
+</style>
+<title>Homework 5 - Part 2 Dropdown Menus</title>
+</head>
+<body>
+<h2 id="head">Dropdown Menus</h2>
+<label for="bkgd">Select a Link:</label>
+<select onchange="window.open(this.value)">
+  <option value="">--Select One--</option>
+  <option value="https://www.w3schools.com/">W3Schools</option>
+  <option value="https://www.wikipedia.org/">Wikipedia</option>
+  <option value="https://www.quackit.com/">Quackit</option>
+</select>
+<label for="sel">Select a Link:</label>
+<select id="sel" name="sel">
+  <option value="">--Select One--</option>
+  <option value="https://www.w3schools.com/">W3Schools</option>
+  <option value="https://www.wikipedia.org/">Wikipedia</option>
+  <option value="https://www.quackit.com/">Quackit</option>
+</select>
+<button onclick="window.open(document.getElementById('sel').value)">Go</button>
+
+<p>-----------------------</p>
+<ul>
+  <li><a href="https://nicholasrfrintz.github.io/hw1.html">hw1.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw3.html">hw3.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw4.html">hw4.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw5.html">hw5.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw6.html">hw6.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw7.html">hw7.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw8.html">hw8.html - Soon</a></li>
+</ul>
+</body>
+</html>

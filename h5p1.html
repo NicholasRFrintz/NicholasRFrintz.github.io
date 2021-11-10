@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript">
+function validate() {
+  let x = document.forms["myForm"]["fname"].value;
+  let y = document.forms["myForm"]["lname"].value;
+  let z = document.forms["myForm"]["lang"].value;
+  let w = document.forms["myForm"]["resi"].value;
+  if (x == "" || y == "" || z == "" || w == "") {
+    if (x == "") {
+      document.getElementById("fn").innerHTML = "First name must be filled out";
+      document.getElementById("fin").innerHTML = "";
+    }
+    else {
+      document.getElementById("fn").innerHTML = "";
+    }
+    if (y == "") {
+      document.getElementById("ln").innerHTML = "Last name must be filled out";
+      document.getElementById("fin").innerHTML = "";
+    }
+    else {
+      document.getElementById("ln").innerHTML = "";
+    }
+    if (z == "") {
+      document.getElementById("lan").innerHTML = "Choose One";
+      document.getElementById("fin").innerHTML = "";
+    }
+    else {
+      document.getElementById("lan").innerHTML = "";
+    }
+    if (w == "") {
+      document.getElementById("loc").innerHTML = "Please select a state";
+      document.getElementById("fin").innerHTML = "";
+    }
+    else {
+      document.getElementById("loc").innerHTML = "";
+    }
+    return false;
+  }
+  if (x != "" && y != "" && z != "" && w != "") {
+    document.getElementById("fn").innerHTML = "";
+    document.getElementById("ln").innerHTML = "";
+    document.getElementById("lan").innerHTML = "";
+    document.getElementById("loc").innerHTML = "";
+    document.getElementById("fin").innerHTML = "All Validated";
+    return false;
+  }
+}
+</script>
+<style>
+#head {
+  text-align: center;
+}
+#fn, #ln, #lan, #loc {
+  color: red;
+}
+</style>
+<title>Homework 5 - Part 1 Form</title>
+</head>
+<body>
+<h2 id="head">Form</h2>
+<form name="myForm" action="/action_page.php" onsubmit="return validate()" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <p id="fn"></p><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+  <p id="ln"></p><br>
+  <p>Please select your preferred language:</p>
+  <input type="radio" id="eng" name="lang" value="eng">
+  <label for="eng">English</label><br>
+  <input type="radio" id="spa" name="lang" value="spa">
+  <label for="spa">Spanish</label><br>
+  <input type="radio" id="chi" name="lang" value="chi">
+  <label for="chi">Chinese</label><br>
+  <p id="lan"></p><br>
+  <label for="cars">Please select your state of residence:</label>
+  <select name="resi" id="resi">
+    <option value="">--Select One--</option>
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="CO">Colorado</option>
+  </select><br>
+  <p id="loc"></p><br>
+  <input type="submit" value="Submit">
+  <p id="fin"></p>
+<p>-----------------------</p>
+<ul>
+  <li><a href="https://nicholasrfrintz.github.io/hw1.html">hw1.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw3.html">hw3.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw4.html">hw4.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw5.html">hw5.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw6.html">hw6.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw7.html">hw7.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw8.html">hw8.html - Soon</a></li>
+</ul>
+</form>
+</body>
