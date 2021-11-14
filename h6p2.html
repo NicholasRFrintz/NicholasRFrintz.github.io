@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<script>
+function findChar() {
+    let count = 0;
+    
+    let str = document.getElementById("input").value;
+    let letter = document.getElementById("search").value;
+    let letter2 = letter.toUpperCase();
+    let letter3 = letter.toLowerCase();
+    
+    let pattern = /[a-zA-Z]{1}/;
+    let result = letter.length;
+    
+    if (result > 1) {
+      document.getElementById("occ").innerHTML = "Invalid letter. Input only one search character.";
+      return;
+    }
+    
+    for (let i = 0; i < str.length; i++) {
+        if (str.charAt(i) == letter || str.charAt(i) == letter2 || str.charAt(i) == letter3) {
+            count += 1;
+        }
+    }
+    document.getElementById("occ").innerHTML = "Letter count of ["+letter+"] is: "+count;
+    if (count == 0) {
+      window.open("h6p2error.html", "_blank", "height=100px,width=300px");
+    }
+}
+</script>
+<style>
+#input {
+  width: 300px;
+  height: 100px;
+}
+</style>
+<title>Homework 6 - Part 2 Character Detection</title>
+</head>
+<body>
+<h1 style="text-align:center">Character Detection</h1>
+<p>Input lines:</p>
+<textarea type="text" id="input" name="input" placeholder="Lorem Ipsum" rows="8" cols="50">
+</textarea>
+<p>Input Search Character:</p>
+<input type="text" id="search" name="search" placeholder="A (Case insensitive)" pattern="[a-zA-Z]*{1}" required>
+<button onclick="findChar()">Search</button>
+
+<p id="occ"></p>
+
+<p>-----------------------</p>
+<ul>
+  <li><a href="https://nicholasrfrintz.github.io/hw1.html">hw1.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw3.html">hw3.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw4.html">hw4.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw5.html">hw5.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw6.html">hw6.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw7.html">hw7.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw8.html">hw8.html - Soon</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<script>
+function calc() {
+  let num = document.getElementById("input").value;
+  
+  let pattern = /-?[0-9]+\.[0-9]{4,}/;
+  let result = pattern.test(num);
+  
+  if (result == false) {
+    document.getElementById("round").innerHTML = "Invalid input. Please input a number with 4 or more decimals.";
+    document.getElementById("sqrt").innerHTML = "";
+    document.getElementById("n10").innerHTML = "";
+    document.getElementById("n100").innerHTML = "";
+    document.getElementById("n1000").innerHTML = "";
+    return;
+  }
+  
+  let rout1 = Math.round(num);
+  let text1 = "Math.round output of "+num+" is: ";
+  text1 += rout1;
+  document.getElementById("round").innerHTML = text1;
+
+  let rout2p = Math.sqrt(num);
+  let rout2 = Math.round(rout2p);
+  let text2 = "Math.sqrt output of "+num+" rounded to an integer is: ";
+  text2 += rout2;
+  document.getElementById("sqrt").innerHTML = text2;
+
+  let rout3 = parseFloat(num).toFixed(1);
+  let text3 = "toFixed(1) output of "+num+" is: ";
+  text3 += rout3;
+  document.getElementById("n10").innerHTML = text3;
+
+  let rout4 = parseFloat(num).toFixed(2);
+  let text4 = "toFixed(2) output of "+num+" is: ";
+  text4 += rout4;
+  document.getElementById("n100").innerHTML = text4;
+
+  let rout5 = parseFloat(num).toFixed(3);
+  let text5 = "toFixed(3) output of "+num+" is: ";
+  text5 += rout5;
+  document.getElementById("n1000").innerHTML = text5;
+}
+</script>
+<style>
+input {
+  width: 50%;
+}
+</style>
+<title>Homework 6 - Part 1 Math Functions</title>
+</head>
+<body>
+<h1 style="text-align:center">Math Functions</h1>
+<p>Number used:</p>
+<input type="number" id="input" name="numb" placeholder="Any number with 4+ decimals" pattern="-?[0-9]+\.([0-9]{4,})" required title="4 decimals minimum">
+<button onclick="calc()">Start</button>
+
+<p id="round"></p>
+
+<p id="sqrt"></p>
+
+<p id="n10"></p>
+
+<p id="n100"></p>
+
+<p id="n1000"></p>
+
+<p>-----------------------</p>
+<ul>
+  <li><a href="https://nicholasrfrintz.github.io/hw1.html">hw1.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw3.html">hw3.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw4.html">hw4.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw5.html">hw5.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw6.html">hw6.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw7.html">hw7.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw8.html">hw8.html - Soon</a></li>
+</ul>
+</body>
+</html>
