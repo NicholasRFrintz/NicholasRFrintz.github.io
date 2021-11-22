@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+#head {
+  text-align: center;
+}
+.white {
+  background-color: white;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.grey {
+  background-color: grey;
+}
+</style>
+<title>Homework 7 - Part 1 Customization Demo</title>
+</head>
+<body>
+<h2 id="head">Customization Demo</h2>
+<form name="pageStyle">
+  <h3>Note: I am aware that these changes are supposed to be done via the className property, but I can't find a way for it to happen without overwriting the previous change.</h3>
+  <p>Change background color here:</p>
+  <input type="radio" id="red" name="color" value="red" onchange="color1()">
+  <label for="red">Red</label><br>
+  <input type="radio" id="yellow" name="color" value="yellow" onchange="color2()">
+  <label for="yellow">Yellow</label><br>
+  <input type="radio" id="grey" name="color" value="grey" onchange="color3()">
+  <label for="grey">Grey</label><br>
+  <p>Change font size and family here:</p>
+  <label for="fonts">Font Size:</label>
+  <select id="fonts" onchange="csize(this.value)">
+  <option id="14" value="14">14</option>
+  <option id="16" value="16" selected>16</option>
+  <option id="18" value="18">18</option>
+  </select>
+  <label for="fontf">Font Family:</label>
+  <select id="fontf" onchange="cstyle(this.value)">
+  <option value="Times New Roman" onchange="change()">Times New Roman</option>
+  <option value="Arial" onchange="change()">Arial</option>
+  <option value="Impact" onchange="change()">Impact</option>
+  </select>
+  <p>Change text style and weight here:</p>
+  <input type="checkbox" id="italic" name="italic" value="italic" onclick="changes1(this)">
+  <label for="italic"><i>Italic</i></label><br>
+  <input type="checkbox" id="bold" name="bold" value="bold" onclick="changes2(this)">
+  <label for="italic"><b>Bold</b></label><br>
+  <button type="button" value="t1" onclick="ctt1()">Text 1</button>
+  <button type="button" value="t2" onclick="ctt2()">Text 2</button>
+  <button type="button" value="t3" onclick="ctt3()">Text 3</button>
+</form>
+<div id="dm">
+<p id="demo">This text and area is subject to change to demonstrate function.</p>
+</div>
+<button type="button" onclick="reset()">Reset</button>
+
+<script>
+let colo = "null";
+var si = "null";
+let fs = "null";
+let tsi = "null";
+let tsb = "null";
+
+function color1() {
+  colo = document.getElementById("red").value;
+  document.getElementById("dm").className = "red";
+}
+function color2() {
+  colo = document.getElementById("yellow").value;
+  document.getElementById("dm").className = "yellow";
+}
+function color3() {
+  colo = document.getElementById("grey").value;
+  document.getElementById("dm").className = "grey";
+}
+function csize() {
+  si = document.getElementById("fonts").value;
+  let st = si + "px";  document.getElementById("demo").style.fontSize = st;
+}
+function cstyle() {
+  fs = document.getElementById("fontf").value;
+  let fstyle = fs + ",Helvetica";  document.getElementById("demo").style.fontFamily = fstyle;
+}
+function changes1() {
+  if (italic.checked) {
+  document.getElementById("demo").style.fontStyle = "italic";
+  }
+  else {
+    document.getElementById("demo").style.fontStyle = "normal";
+  }
+}
+function changes2() {
+  if (bold.checked) {
+  document.getElementById("demo").style.fontWeight = "bold";
+  }
+  else {
+    document.getElementById("demo").style.fontWeight = "normal";
+  }
+}
+function ctt1() {
+  document.getElementById("demo").innerHTML = "This is Text 1. My name is Douglas.";
+}
+function ctt2() {
+  document.getElementById("demo").innerHTML = "This is Text 2. I am bored now.";
+}
+function ctt3() {
+  document.getElementById("demo").innerHTML = "This is Text 3. Because I am in quarantine.";
+}
+function reset() {
+  document.getElementById("dm").className = "white";
+  document.getElementById("demo").style.fontSize = "16px";
+  document.getElementById("demo").style.fontFamily = "Times New Roman,Arial";
+  document.getElementById("demo").style.fontStyle = "normal";
+  document.getElementById("demo").style.fontWeight = "normal";
+  document.getElementById("demo").innerHTML = "This text and area is subject to change to demonstrate function.";
+  
+}
+</script>
+
+<p>-----------------------</p>
+<ul>
+  <li><a href="https://nicholasrfrintz.github.io/hw1.html">hw1.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw3.html">hw3.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw4.html">hw4.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw5.html">hw5.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw6.html">hw6.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw7.html">hw7.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw8.html">hw8.html - Soon</a></li>
+</ul>
+</body>
+</html>

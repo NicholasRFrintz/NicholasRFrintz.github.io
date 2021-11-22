@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+#head {
+  text-align: center;
+}
+</style>
+<title>Homework 7 - Part 2 Cookies</title>
+</head>
+<body onload="checkCookie()">
+<h2 id="head">Cookies</h2>
+<p>Query: Why are these named Cookies and not, say for example, TempSave?</p>
+<form name="pageStyle">
+  <label for="uname">Username:</label>
+  <input type="text" id="uname" name="uname">
+  <button name="button" onclick="setCookie("username",uname,10)">Make the Cookie</button>
+</form>
+<p id="open"></p>
+<script>
+setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    document.getElementById("open").innerHTML="Welcome back " + user;
+  }
+}
+</script>
+
+<p>-----------------------</p>
+<ul>
+  <li><a href="https://nicholasrfrintz.github.io/hw1.html">hw1.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw3.html">hw3.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw4.html">hw4.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw5.html">hw5.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw6.html">hw6.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw7.html">hw7.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw8.html">hw8.html - Soon</a></li>
+</ul>
+</body>
+</html>
