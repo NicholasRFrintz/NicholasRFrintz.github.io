@@ -2,25 +2,46 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<style>
-body {
-            color: grey;
-         }
-</style>
-<title>HW 8</title>
+<title>CNIT 133 Homework 8 - Ajax Applications</title>
+<script>
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    }
+    xmlhttp.open("GET", "gethint.php?q="+str, true);
+    xmlhttp.send();
+  }
+}
+</script>
 </head>
 <body>
 <h1 style="text-align:center">Homework 8</h1>
-<p>Coming Soon</p>
+<p>Let it be said that this was highly confusing for me.</p>
+
+<p><b>Start typing a name in the input field below:</b></p>
+<form action="">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
+</form>
+<p>Suggestions: <span id="txtHint"></span></p>
+
+<p>-----------------------</p>
 <ul>
   <li><a href="https://nicholasrfrintz.github.io/hw1.html">hw1.html - Available</a></li>
-  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Soon</a></li>
-  <li><a href="https://nicholasrfrintz.github.io/hw3.html">hw3.html - Soon</a></li>
-  <li><a href="https://nicholasrfrintz.github.io/hw4.html">hw4.html - Soon</a></li>
-  <li><a href="https://nicholasrfrintz.github.io/hw5.html">hw5.html - Soon</a></li>
-  <li><a href="https://nicholasrfrintz.github.io/hw6.html">hw6.html - Soon</a></li>
-  <li><a href="https://nicholasrfrintz.github.io/hw7.html">hw7.html - Soon</a></li>
-  <li><a href="https://nicholasrfrintz.github.io/hw8.html">hw8.html - Soon</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw2.html">hw2.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw3.html">hw3.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw4.html">hw4.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw5.html">hw5.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw6.html">hw6.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw7.html">hw7.html - Available</a></li>
+  <li><a href="https://nicholasrfrintz.github.io/hw8.html">hw8.html - Available</a></li>
 </ul>
 </body>
 </html>
